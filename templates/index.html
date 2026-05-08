@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <h2 class="mb-4">Dashboard</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Current Balance</h5>
+                    <h2 class="{{ 'text-success' if balance >= 0 else 'text-danger' }}">
+                        {{ balance | currency }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Transactions</h5>
+                    <ul class="list-group list-group-flush">
+                        {% for t in transactions %}
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>{{ t.category }} - {{ t.description or '' }}</span>
+                                <span class="{{ 'text-success' if t.type == 'income' else 'text-danger' }}">
+                                    {{ t.amount | currency }}
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5>Monthly Budgets</h5>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Budgeted</th>
+                        <th>Spent</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for b in budgets %}
+                        <tr>
+                            <td>{{ b.category }}</td>
+                            <td>{{ b.budgeted | currency }}</td>
+                            <td>{{ b.spent | currency }}</td>
+                            <td class="{{ 'text-success' if b.remaining >= 0 else 'text-danger' }}">
+                                {{ b.remaining | currency }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block main %}
+    <h2 class="mb-4">Contact Us</h2>
+    <p>We'd love to hear from you! Whether you have feedback, suggestions, a query, or an issue to report, please don't hesitate to get in touch.</p>
+
+    <ul class="mb-3">
+        <li><strong>Email:</strong> <a href="mailto:udarshgoyal@gmail.com">udarshgoyal@gmail.com</a></li>
+    </ul>
+
+    <p class="mt-3">Alternatively, fill out the contact form below:</p>
+
+    <form class="mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Feedback, Suggestion, Query, or Issue">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Please describe your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+
+    <div class="mt-3 mx-auto" style="max-width: 500px;">
+        <a href="/" class="btn btn-outline-secondary w-100">Back to Home</a>
+    </div>
+{% endblock %}

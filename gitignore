@@ -1,0 +1,15 @@
+# Database (ephemeral on Render free tier anyway)
+finance.db
+
+# Flask session files
+flask_session/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db

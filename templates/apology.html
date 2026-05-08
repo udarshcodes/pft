@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block main %}
+    <div class="text-center py-5">
+        <h1 class="display-4 text-danger">{{ top }}</h1>
+        <p class="lead mt-3">{{ bottom }}</p>
+        <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+    </div>
+{% endblock %}

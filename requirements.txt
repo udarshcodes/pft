@@ -1,0 +1,5 @@
+Flask==2.3.2
+Flask-Session==0.4.0
+cs50==8.0.1
+Werkzeug==2.3.7
+gunicorn==21.2.0

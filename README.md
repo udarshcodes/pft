@@ -1,14 +1,6 @@
 # FinTrack — Personal Finance Tracker
 
-> A full stack web app to track income, expenses, and budgets — built as my CS50x Final Project.
-
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)
-![Flask](https://img.shields.io/badge/Flask-2.3.2-black?style=flat-square&logo=flask)
-![SQLite](https://img.shields.io/badge/SQLite-3-blue?style=flat-square&logo=sqlite)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple?style=flat-square&logo=bootstrap)
-![CS50x](https://img.shields.io/badge/CS50x-Final%20Project-red?style=flat-square)
-
----
+**Live Demo:** [fintrack-iudq.onrender.com](https://fintrack-iudq.onrender.com)
 
 ## About
 
@@ -16,19 +8,21 @@ FinTrack was originally built inside Harvard's CS50x virtual codespace as my fin
 
 It's not trying to compete with Walnut or ET Money. It's a technical exercise in building something end to end: from schema design and auth to deployment.
 
----
-
 ## Features
 
-- **Authentication** — Register, login, logout with hashed passwords (Werkzeug)
-- **Transactions** — Add income or expense entries with category, description, and date
-- **Budget Tracking** — Set monthly budgets per category; see remaining vs spent in real time
-- **Transaction History** — View and delete all past transactions
-- **Financial Reports** — Monthly income vs expense summary + top expense categories
-- **Multi-currency** — Supports USD, INR, EUR, GBP, JPY, and more
-- **Settings** — Change password and currency preference
+**Authentication** — Register, login, logout with hashed passwords (Werkzeug)
 
----
+**Transactions** — Add income or expense entries with category, description, and date
+
+**Budget Tracking** — Set monthly budgets per category; see remaining vs spent in real time
+
+**Transaction History** — View and delete all past transactions
+
+**Financial Reports** — Monthly income vs expense summary + top expense categories
+
+**Multi-currency** — Supports USD, INR, EUR, GBP, JPY, and more
+
+**Settings** — Change password and currency preference
 
 ## Tech Stack
 
@@ -39,8 +33,6 @@ It's not trying to compete with Walnut or ET Money. It's a technical exercise in
 | Auth | Werkzeug password hashing, Flask-Session |
 | Frontend | Jinja2, Bootstrap 5, custom CSS |
 | Deployment | Render (gunicorn) |
-
----
 
 ## Running Locally
 
@@ -66,8 +58,6 @@ python app.py
 ```
 
 Visit `http://127.0.0.1:5000`
-
----
 
 ## Project Structure
 
@@ -96,29 +86,26 @@ pft/
     └── apology.html
 ```
 
----
-
 ## A Note on the UI
 
 The original submission used default Bootstrap styling. The public version uses a custom dark theme inspired by fintech dashboards — DM Sans + Syne fonts, glassmorphism cards, and a consistent design system. No functionality was changed.
 
----
-
 ## What I Learned
 
-- Designing a relational database schema from scratch
-- Session-based authentication and password hashing
-- Flask routing, Jinja2 templating, and custom filters
-- Writing SQL aggregate queries for reports and budget tracking
-- Deploying a Python web app to production with gunicorn and Render
+Designing a relational database schema from scratch
 
----
+Session-based authentication and password hashing
+
+Flask routing, Jinja2 templating, and custom filters
+
+Writing SQL aggregate queries for reports and budget tracking
+
+Deploying a Python web app to production with gunicorn and Render
 
 ## Author
 
-**Udarsh Goyal** — 1st year B.Tech CSE, VIT Chennai  
+**Udarsh Goyal** 
 [GitHub](https://github.com/udarshcodes) · [Portfolio](https://udarshcodes.github.io/personal_portfolio/) · [LinkedIn](https://www.linkedin.com/in/udarshgoyal-256095383)
 
----
 
 *CS50x Final Project — Harvard University, 2025*
